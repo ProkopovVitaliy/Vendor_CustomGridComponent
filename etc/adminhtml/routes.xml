@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="grid_component" frontName="grid_component">
+            <module name="Vendor_CustomGridComponent"/>
+        </route>
+    </router>
+</config>
