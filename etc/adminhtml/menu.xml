@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vendor_CustomGridComponent::custom_component" title="Grid with custom component"  resource="Magento_Customer::customer" module="Vendor_CustomGridComponent" action="grid_component/customerGrid/index"/>
+    </menu>
+</config>

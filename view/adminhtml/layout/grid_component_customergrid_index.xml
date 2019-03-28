@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<body>
+    <head>
+        <title>Customer grid with custom ui component</title>
+    </head>
+    <referenceContainer name="content">
+        <uiComponent name="customer_component_listing"/>
+    </referenceContainer>
+</body>
