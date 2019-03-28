@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">customer_component_listing.customer_grid_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>customer_component_columns</spinner>
+        <deps>
+            <dep>customer_component_listing.customer_grid_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="customer_grid_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <storageConfig>
+                <param name="cacheRequests" xsi:type="boolean">false</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="customer_grid_data_source">
+            <settings>
+                <requestFieldName>entity_id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <columns name="customer_component_columns">
+        <column name="entity_id">
+            <settings>
+                <label translate="true">Id</label>
+            </settings>
+        </column>
+        <column name="created_at" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date">
+            <settings>
+                <label translate="true">Date</label>
+            </settings>
+        </column>
+        <column name="firstname">
+            <settings>
+                <label translate="true">First Name</label>
+            </settings>
+        </column>
+        <column name="lastname" >
+            <settings>
+                <label translate="true">Last Name</label>
+            </settings>
+        </column>
+        <column name="custom_component" component="Vendor_CustomGridComponent/js/grid/columns/custom">
+            <settings>
+                <label translate="true">Custom Field</label>
+            </settings>
+        </column>
+    </columns>
+</listing>
